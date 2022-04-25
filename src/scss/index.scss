@@ -1,0 +1,12 @@
+@import '../css/reset';
+@import 'header';
+@import 'main';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8fafd;
+}

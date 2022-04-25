@@ -10,16 +10,14 @@ module.exports = {
     mode: mode,
     entry: './src/app.js',
     output: {
-      filename: '[name].[contenthash].js',
-      assetModuleFilename: 'assets/[hash][ext][query]',
+      filename: mode === 'production' ? '[name].[contenthash].js' : '[name].js',
+      assetModuleFilename: 'assets/[name][ext][query]',
       clean: true
     },
     target: 'web',
     devtool: 'source-map',
     devServer:{
       static: './dist',
-      hot: false, // optional, but you must not set both hot and liveReload to true
-      liveReload: true
     },
     module: {
         rules: [
@@ -76,7 +74,7 @@ module.exports = {
           template: "./src/index.html"
         }),
         new MiniCssExtractPlugin({
-          filename: '[name].[contenthash].css'
+          filename: (mode === 'development') ? '[name].[contenthash].css' : '[name].css'
         }),
     ],
 }

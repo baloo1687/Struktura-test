@@ -1,0 +1,18 @@
+.header {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(131, 144, 193, 0.25);
+    margin-bottom: 16px;
+    &__wrapper {
+        max-width: 1092px;
+        margin: 0 auto;
+    }
+    &__logo {
+        padding: 22px 0 23px 0;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+        letter-spacing: 0.27em;
+        text-transform: uppercase;
+        color: #00C4C4;
+    }
+}
