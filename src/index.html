@@ -48,67 +48,67 @@
                 <p class="features__title">You get all these features:</p>
                 <ul class="features__list">
                     <li class="features__item active">
-                        <span class="features__item-name features__item-name--1">Feature 1</span>
+                        <span class="features__item-name features__item-name--1  js-features-button">Feature 1</span>
                         <div class="features__item-image">
                             <img src="./img/app.svg" alt="Apps image">
                         </div>
                     </li>
                     <li class="features__item">
-                        <span class="features__item-name features__item-name--2">Feature 2</span>
+                        <span class="features__item-name features__item-name--2 js-features-button">Feature 2</span>
                         <div class="features__item-image">
                             <img src="./img/app.svg" alt="Apps image">
                         </div>
                     </li>
                     <li class="features__item">
-                        <span class="features__item-name features__item-name--3">Feature 3</span>
+                        <span class="features__item-name features__item-name--3 js-features-button">Feature 3</span>
                         <div class="features__item-image">
                             <img src="./img/app.svg" alt="Apps image">
                         </div>
                     </li>
                     <li class="features__item">
-                        <span class="features__item-name features__item-name--4">Feature 4</span>
+                        <span class="features__item-name features__item-name--4 js-features-button">Feature 4</span>
                         <div class="features__item-image">
                             <img src="./img/app.svg" alt="Apps image">
                         </div>
                     </li>
                     <li class="features__item">
-                        <span class="features__item-name features__item-name--5">Feature 5</span>
+                        <span class="features__item-name features__item-name--5 js-features-button">Feature 5</span>
                         <div class="features__item-image">
                             <img src="./img/app.svg" alt="Apps image">
                         </div>
                     </li>
                     <li class="features__item">
-                        <span class="features__item-name features__item-name--6">Feature 6</span>
+                        <span class="features__item-name features__item-name--6 js-features-button">Feature 6</span>
                         <div class="features__item-image">
                             <img src="./img/app.svg" alt="Apps image">
                         </div>
                     </li>
                     <li class="features__item">
-                        <span class="features__item-name features__item-name--7">Feature 7</span>
+                        <span class="features__item-name features__item-name--7 js-features-button">Feature 7</span>
                         <div class="features__item-image">
                             <img src="./img/app.svg" alt="Apps image">
                         </div>
                     </li>
                     <li class="features__item">
-                        <span class="features__item-name features__item-name--8">Feature 8</span>
+                        <span class="features__item-name features__item-name--8 js-features-button">Feature 8</span>
                         <div class="features__item-image">
                             <img src="./img/app.svg" alt="Apps image">
                         </div>
                     </li>
                     <li class="features__item">
-                        <span class="features__item-name features__item-name--9">Feature 9</span>
+                        <span class="features__item-name features__item-name--9 js-features-button">Feature 9</span>
                         <div class="features__item-image">
                             <img src="./img/app.svg" alt="Apps image">
                         </div>
                     </li>
                     <li class="features__item">
-                        <span class="features__item-name features__item-name--10">Feature 10</span>
+                        <span class="features__item-name features__item-name--10 js-features-button">Feature 10</span>
                         <div class="features__item-image">
                             <img src="./img/app.svg" alt="Apps image">
                         </div>
                     </li>
                     <li class="features__item">
-                        <span class="features__item-name features__item-name--11">Feature 11</span>
+                        <span class="features__item-name features__item-name--11 js-features-button">Feature 11</span>
                         <div class="features__item-image">
                             <img src="./img/app.svg" alt="Apps image">
                         </div>
@@ -139,38 +139,43 @@
                         </svg>
                     </a>
                     <div class="checkout__choice">Or pay with card</div>
-                    <form class="checkout__form form" action="#" method="get">
+                    <form class="checkout__form form" action="#" method="get" autocomplete="on">
                         <div class="form__field form__field-email">
                             <span class="form__label">Email</span>
+                            <span class="form__message js-message-email"></span>
                             <div class="form__input-container form__input-container-email">
-                                <input class="form__input" type="email" placeholder="examplemail@mail.com">
+                                <input class="form__input js-validate-email" type="email" placeholder="examplemail@mail.com">
                             </div>
                         </div>
                         <div class="form__field form__field-card">
                             <span class="form__label">Card information</span>
+                            <span class="form__message js-message-card"></span>
                             <div class="form__input-container form__input-container-card">
-                                <input class="form__input" type="number" placeholder="0000 0000 0000 0000">
+                                <input class="form__input js-validate-cardnumber" autocomplete="cc-number" type="text" placeholder="0000 0000 0000 0000">
                             </div>
                             <div class="form__input-container form__input-container-date">
-                                <input class="form__input" type="number" placeholder="MM/YYYY">
+                                <input class="form__input js-validate-carddate" autocomplete="cc-exp" type="text" placeholder="MM/YYYY">
                             </div>
                             <div class="form__input-container form__input-container-cvv">
-                                <input class="form__input" type="password" placeholder="CVV">
+                                <input class="form__input js-validate-cardcvv" type="password" autocomplete="off" placeholder="CVV">
                             </div>
                         </div>
                         <div class="form__field form__field-name">
                             <span class="form__label">Name on card</span>
+                            <span class="form__message js-message-name"></span>
                             <div class="form__input-container form__input-container-user">
-                                <input class="form__input" type="text" placeholder="Enter cardholder name">
+                                <input class="form__input js-validate-name" type="text" placeholder="Enter cardholder name">
                             </div>
                         </div>
-                        <div class="form__field form__field-coupon">
-                            <span class="form__label">I have a coupon code</span>
-                            <div class="form__input-container">
-                                <input class="form__input" type="text" placeholder="Enter your promo code">
+                        <div class="form__field form__field-coupon js-coupon-field">
+                            <span class="form__label js-coupon-button">I have a coupon code</span>
+                            <span class="form__message js-message-coupon"></span>
+                            <div class="form__input-container js-coupon-container">
+                                <input class="form__input js-validate-coupon" type="text" placeholder="Enter your promo code">
+                                <button class="form__input-apply js-coupon-apply" type="button">Apply</button>
                             </div>
                         </div>
-                        <button class="form__submit" type="submit">Submit order</button>
+                        <button class="form__submit js-submit" disabled type="submit">Submit order</button>
                     </form>
                     <div class="checkout__choice checkout__choice-paypal">Or alternative methods</div>
                     <div class="checkout__alternative alternative">
@@ -219,7 +224,7 @@
                         Automatic Renewal: <span>ON</span>
                     </p>
                     <p class="checkout__policy">
-                        By clicking “submit order” you agree to Terms of service & Recurring Policy as well as to Refund Policy & Legal Disclaimer.
+                        By clicking “submit order” you agree to <a href="#">Terms of service</a> & <a href="#">Recurring Policy</a> as well as to <a href="#">Refund Policy</a> & <a href="#">Legal Disclaimer</a>.
                     </p>
                     <div class="checkout__security-images">
                         <img src="./img/visa.jpg" alt="Visa" class="checkout__security-image">
