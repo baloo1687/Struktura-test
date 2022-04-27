@@ -31,8 +31,6 @@ export default class FormValidator {
             name: document.querySelector('.js-message-name'),
             coupon: document.querySelector('.js-message-coupon')
         }
-
-        this.init();
     }
 
     init() {
@@ -42,7 +40,7 @@ export default class FormValidator {
         this.cardCvvValidator();
         this.nameValidator();
         this.couponValidator();
-        this.submitForm();
+        this.sendQuery();
     }
 
     emailValidator() {
@@ -206,18 +204,44 @@ export default class FormValidator {
     changeSubmitStatus() {
         if (Object.values(this.isValid).every(element => element == true)) {
             this.submitButton.removeAttribute('disabled');
+
+            return true;
         } else {
             this.submitButton.setAttribute('disabled', 'disabled');
+
+            return false;
         }
     }
 
-    submitForm() {
-        this.submitButton.addEventListener('click', (e) => {
-            //for dev, del after testing
+    sendQuery() {
+        this.submitButton.addEventListener('click', e => {
             e.preventDefault();
-            console.log('submit');
-        });
-    }
-
+            if (this.changeSubmitStatus()) {
+                const data = {
+                    email: this.inputsNodes.email.value,
+                    card: {
+                        number: this.inputsNodes.number.value,
+                        date: this.inputsNodes.date.value,
+                        cvv: this.inputsNodes.cvv.value,
+                        name: this.inputsNodes.name.value,
+                    },
+                    coupon: this.inputsNodes.coupon.value == 'promo10' ? this.inputsNodes.coupon.value : false
+                }
     
+                // API for test queries https://reqres.in/
+                const url = 'https://reqres.in/api/users'
+    
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: data,
+                    dataType: 'json'
+                })
+                .done(data => {
+                    alert('Your pay has sent!')
+                    console.log(data);
+                })
+            }
+        })
+    }
 }

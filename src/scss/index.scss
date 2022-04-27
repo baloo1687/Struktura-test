@@ -1,6 +1,8 @@
 @import '../css/reset';
+@import 'mixins';
 @import 'header';
 @import 'main';
+@import 'footer';
 
 * {
     box-sizing: border-box;
@@ -9,4 +11,5 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f8fafd;
+    overflow-x: hidden;
 }

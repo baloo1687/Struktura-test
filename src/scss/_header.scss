@@ -5,14 +5,33 @@
     &__wrapper {
         max-width: 1092px;
         margin: 0 auto;
+        padding: 22px 0 23px 0;
+        @include lg-tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 16px 11px;
+        }
     }
     &__logo {
-        padding: 22px 0 23px 0;
         font-weight: 700;
         font-size: 18px;
         line-height: 27px;
         letter-spacing: 0.27em;
         text-transform: uppercase;
         color: #00C4C4;
+    }
+    &__burger {
+        display: none;
+        width: 24px;
+        height: 24px;
+        border: none;
+        background-image: url(../img/burger.svg);
+        background-color: transparent;
+        background-size: contain;
+        background-repeat: no-repeat;
+        @include lg-tablet {
+            display: block;
+        }
     }
 }
